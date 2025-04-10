@@ -17,10 +17,7 @@ jobs:
 
             -   name: Tool Restore
                 run: dotnet tool restore
-
-            -   name: Paket restore
-                run: dotnet paket restore
-
+                
             -   name: Test
                 working-directory: ./Build
                 run: dotnet run --project Build.fsproj -- Test
