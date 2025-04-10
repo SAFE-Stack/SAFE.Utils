@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <RootNamespace>SAFE</RootNamespace>
+        <Authors>Compositional IT</Authors>
+        <Copyright>Copyright (c) 2024 Compositional IT</Copyright>
+        <TargetFramework>net8.0</TargetFramework>
+        <PackageId>SAFE.Client.Utils</PackageId>
+        <DefineConstants>FABLE_COMPILER</DefineConstants>
+    </PropertyGroup>
+
+        <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageProjectUrl>https://github.com/SAFE-Stack/SAFE.Meta</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <PackageIcon>safe-logo.png</PackageIcon>
+        <RepositoryUrl>https://github.com/SAFE-Stack/SAFE.Meta.git</RepositoryUrl>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+
+        <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath="" />
+        <None Include="../../LICENSE" Pack="true" PackagePath="" />
+        <None Include="../../safe-logo.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SAFE.Client</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="SAFE.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

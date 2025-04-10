@@ -1,0 +1,1 @@
+Contains utilities and helper types for the SAFE Stack client component. 
