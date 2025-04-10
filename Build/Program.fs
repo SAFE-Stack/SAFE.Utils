@@ -25,20 +25,18 @@ module Processes =
 let sourceFolder = Path.getFullName """../src"""
 let outputFolder = Path.getFullName """../nugetPackages"""
 
-let clientTestFolder = Path.getFullName """../test/SAFE.Client.Tests"""
+let clientTestFolder = Path.getFullName """../test/Client"""
 
 let projects = [ "Client"; "SAFE.Server" ]
 
 Target.create "Test" (fun _ ->
-    Npm.install (fun o -> {
-        o with
-            WorkingDirectory = clientTestFolder
-    })
+    Npm.install (fun o ->
+        { o with
+            WorkingDirectory = clientTestFolder })
 
-    Npm.run "test" (fun o -> {
-        o with
-            WorkingDirectory = clientTestFolder
-    }))
+    Npm.run "test" (fun o ->
+        { o with
+            WorkingDirectory = clientTestFolder }))
 
 Target.create "Bundle" (fun _ ->
     let version = Environment.environVarOrFail "VERSION"
@@ -47,13 +45,11 @@ Target.create "Bundle" (fun _ ->
     projects
     |> List.map (fun project ->
         Processes.runDotnet
-            [
-                "pack"
-                "-o"
-                outputFolder
-                $"-p:PackageVersion={version}"
-                $"-p:PackageReleaseNotes={releaseNotes}"
-            ]
+            [ "pack"
+              "-o"
+              outputFolder
+              $"-p:PackageVersion={version}"
+              $"-p:PackageReleaseNotes={releaseNotes}" ]
             $"""{sourceFolder}/{project}""")
     |> ignore)
 
@@ -61,14 +57,13 @@ Target.create "Bundle" (fun _ ->
 Target.create "Publish" (fun _ ->
     let nugetApiKey = Environment.environVarOrFail "NUGET_API_KEY"
 
-    let nugetArgs = [
-        "push"
-        "*.nupkg"
-        "--api-key"
-        nugetApiKey
-        "--source"
-        """https://api.nuget.org/v3/index.json"""
-    ]
+    let nugetArgs =
+        [ "push"
+          "*.nupkg"
+          "--api-key"
+          nugetApiKey
+          "--source"
+          """https://api.nuget.org/v3/index.json""" ]
 
     Processes.runDotnet [ "nuget"; yield! nugetArgs ] outputFolder)
 
