@@ -18,8 +18,8 @@ jobs:
             -   name: Tool Restore
                 run: dotnet tool restore
 
-            -   name: Dotnet Restore
-                run: dotnet restore
+            -   name: Paket restore
+                run: dotnet paket restore
 
             -   name: Test
                 working-directory: ./Build
