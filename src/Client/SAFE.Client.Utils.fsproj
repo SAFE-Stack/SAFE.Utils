@@ -13,11 +13,11 @@
 
         <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <PackageProjectUrl>https://github.com/SAFE-Stack/SAFE.Meta</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/SAFE-Stack/SAFE.Utils</PackageProjectUrl>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageIcon>safe-logo.png</PackageIcon>
-        <RepositoryUrl>https://github.com/SAFE-Stack/SAFE.Meta.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/SAFE-Stack/SAFE.Utils.git</RepositoryUrl>
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
 
