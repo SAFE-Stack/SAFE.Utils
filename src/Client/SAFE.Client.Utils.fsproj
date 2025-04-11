@@ -34,9 +34,9 @@
   <ItemGroup>
     <Compile Include="SAFE.fs" />
   </ItemGroup>
-
-  <ItemGroup> 
-          <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
-  </ItemGroup>
+  <PropertyGroup>
+    <PackageTags>fable-javascript</PackageTags>
+    <FablePackageType>library</FablePackageType>
+  </PropertyGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

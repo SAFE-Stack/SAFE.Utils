@@ -2,3 +2,4 @@ FSharp.Core
 Fable.Remoting.Client
 Fable.SimpleJson
 Fable.Browser.Dom
+Fable.Package.SDK
