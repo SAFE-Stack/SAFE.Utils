@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "pretest": "dotnet fable -o bld --noCache",
+    "pretest": "dotnet fable -o bld",
     "test": "mocha bld"
   },
   "devDependencies": {
