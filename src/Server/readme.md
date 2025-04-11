@@ -1,0 +1,1 @@
+Contains helper types for SAFE apps

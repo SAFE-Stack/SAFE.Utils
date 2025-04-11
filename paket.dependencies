@@ -8,6 +8,8 @@ nuget Fake.JavaScript.Npm
 nuget FSharp.Core ~> 8
 
 
-nuget Fable.Remoting.Client ~> 7
+nuget Fable.Remoting.Client
 nuget Fable.SimpleJson
 nuget Fable.Mocha
+
+nuget Fable.Remoting.Giraffe
