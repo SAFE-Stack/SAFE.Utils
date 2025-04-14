@@ -13,3 +13,5 @@ nuget Fable.SimpleJson
 nuget Fable.Mocha
 
 nuget Fable.Remoting.Giraffe
+
+nuget Fable.Package.SDK copy_local: true
