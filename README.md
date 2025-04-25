@@ -30,6 +30,6 @@ dotnet add package SAFE.Client.Utils
 
 // In your server project
 dotnet add package SAFE.Server.Utils
-
+```
 
 If you have any questions, please open an issue on the [GitHub repository](https://github.com/SAFE-Stack/SAFE.Utils)
