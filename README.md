@@ -1,8 +1,13 @@
 # SAFE.Utils
 
+
+
 SAFE.Utils provides essential utilities for building [SAFE](https://safe-stack.github.io/) applications. It's distributed as two NuGet packages:
-- [SAFE.Client.Utils][![NuGet](https://img.shields.io/nuget/v/SAFE.Client.Utils.svg)](https://www.nuget.org/packages/SAFE.Client.Utils/)(https://www.nuget.org/packages/SAFE.Client.Utils/) - Utilities for client-side code
-- [SAFE.Server.Utils][![NuGet](https://img.shields.io/nuget/v/SAFE.Server.Utils.svg)](https://www.nuget.org/packages/SAFE.Server.Utils/)(https://www.nuget.org/packages/SAFE.Server.Utils/) - Utilities for server-side code
+
+SAFE.Client.Utils - Utilities for client-side code 
+ [![NuGet](https://img.shields.io/nuget/v/SAFE.Client.Utils.svg)](https://www.nuget.org/packages/SAFE.Client.Utils/)
+
+SAFE.Server.Utils - Utilities for server-side code [![NuGet](https://img.shields.io/nuget/v/SAFE.Server.Utils.svg)](https://www.nuget.org/packages/SAFE.Server.Utils/)
 
 While designed to work together in SAFE applications, each package can be used independently in F# applications.
 
