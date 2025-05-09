@@ -19,7 +19,6 @@ The included functionalities are:
 ### SAFE.Server.Utils
 * Functions that help you get started with Fable.Remoting
 
-
 ## Installation
 
 ```fsharp
