@@ -1,7 +1,5 @@
 # SAFE.Utils
 
-
-
 SAFE.Utils provides essential utilities for building [SAFE](https://safe-stack.github.io/) applications. It's distributed as two NuGet packages:
 
 - SAFE.Client.Utils - Utilities for client-side code 
